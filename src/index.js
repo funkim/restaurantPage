@@ -1,3 +1,3 @@
-import { Headline } from "./headline";
+import { Home } from "./headline";
 import style from "./style.css";
-Headline();
+Home();
