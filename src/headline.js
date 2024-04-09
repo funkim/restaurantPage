@@ -19,19 +19,35 @@ export function Home() {
     headerContainer.classList.add("home");
     menuContainer.classList.add("menu");
     aboutContainer.classList.add("about");
+    menuContainer.classList.add("hide");
+    aboutContainer.classList.add("hide");
     headerContainer.appendChild(restaurantName)
     restaurantName.innerText = "Garbanzo's Burgers";
     headerContainer.appendChild(headerHeadline)
     headerHeadline.innerText = "The Best Burgers in The Beans-ness!"
+    const burgerQuote = document.createElement("h2")
+    const quoteSource = document.createElement("h4")
+    headerContainer.appendChild(burgerQuote);
+    headerContainer.appendChild(quoteSource);
+    burgerQuote.innerText = (`"This is the best burger I've had all week!"`)
+    quoteSource.innerText = ("- Man we found standing outside the local homeless shelter")
+    burgerQuote.classList.add("hQuote")
+    quoteSource.classList.add("sQuote")
 }
 
 export function hidePage(buttonId) {
     [headerContainer,menuContainer,aboutContainer].forEach(container => {
         if (container.id === buttonId) {
-            container.classList.remove("hide");
-            container.classList.add("grid")
+            if (container.classList.contains('hide')) {
+                container.classList.remove("hide");
+                container.classList.add("grid");
+            } else {
+                container.classList.add("hide");
+                container.classList.remove("grid");
+            }
         } else {
             container.classList.add("hide");
+            container.classList.remove("grid");
         }
     });
 }
