@@ -25,13 +25,23 @@ nav {
     font-size: large;
 }
 
-
 #content {
     display: grid;
     grid-row: 2/9;
-    justify-items: center;
 }
 
-h1, h2 {
-    text-align: center;
+.hide {
+    display: none;
+}
+
+.grid {
+    display: grid;
+}
+
+div#Menu {
+display: none;
+}
+
+div#About {
+    display: none;
 }
