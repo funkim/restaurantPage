@@ -1,34 +1,64 @@
 body {
     display: grid;
     grid-template-rows:repeat(8, 12.5%) ;
-    height: 100vh
+    grid-template-columns: repeat(8, 12.5%);
+    height: 100vh;
 }
 
 header {
     display: grid;
-    grid-row: 1/2
+    grid-row: 1/2;
+    grid-column: 5/9;
 }
 nav {
     display: flex; 
     justify-items:center;
     justify-content: space-evenly;
-    background-image: url("img/GarbanzoBeans_1024x1024@2x.webp");
+    background-color: black;
     background-repeat: repeat;
     align-items: center;
+    flex:auto;
 }
 
 .button {
-    display: block;
-    border: 3px solid black;
-    border-radius: 30px;
-    min-width: fit-content;
-    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 2rem;
+    font-size: 2rem;
+    background-color: white;
+    cursor: pointer;
+    border-style: none;
+    outline: none;
+    border: 2px black solid;
+    margin-top: 20px;
+    border:0px
+}
+
+.background {
+    display: grid;
+    background-image:url(img/real-simple-mushroom-black-bean-burgers-recipe-0c365277d4294e6db2daa3353d6ff605.jpg) ;
+    filter: blur(3px);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-row: 1/9; 
+    grid-column: 1/5;
 }
 
 #content {
     display: grid;
     grid-row: 2/9;
+    grid-column: 5/9;
 }
+
+.home {
+    display: grid;
+    justify-content: center;
+    align-content: first baseline;
+    text-align: center;
+
+}
+
 
 .hide {
     display: none;

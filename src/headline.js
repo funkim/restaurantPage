@@ -16,6 +16,9 @@ export function Home() {
     headerContainer.setAttribute('id','Home');
     menuContainer.setAttribute('id','Menu');
     aboutContainer.setAttribute('id','About');
+    headerContainer.classList.add("home");
+    menuContainer.classList.add("menu");
+    aboutContainer.classList.add("about");
     headerContainer.appendChild(restaurantName)
     restaurantName.innerText = "Garbanzo's Burgers";
     headerContainer.appendChild(headerHeadline)
